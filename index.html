@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aqrab First Choice | متجر الساعات الفاخرة</title>
+    <meta name="description" content="أفخم تشكيلة ساعات عالمية فاخرة - تصميم فريد، جودة استثنائية، وتوصيل حتى باب المنزل.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&family=Cinzel:wght@600;800;900&family=Tajawal:wght@700;900&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Three.js for 3D Hero Watch Engine -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./Img/logo.png">
+</head>
+<body>
+    <!-- First Choice-->
+    <!-- ULTRA LUXURY CINEMATIC INTRO SPLASH SCREEN -->
+    <div class="intro-screen" id="introScreen">
+        <div class="intro-curtain left-curtain"></div>
+        <div class="intro-curtain right-curtain"></div>
+        
+        <div class="intro-content-wrap">
+            <div class="intro-ring-wrap">
+                <div class="intro-ring ring-outer"></div>
+                <div class="intro-ring ring-inner"></div>
+                <div class="intro-emblem">
+                    <i class="fa-solid fa-crown"></i>
+                </div>
+            </div>
+            
+            <div class="intro-brand-name">Aqrab</div>
+            <div class="intro-tagline">First Choice TIMEPIECE COLLECTION • 2026</div>
+
+            <div class="intro-loader-box">
+                <div class="intro-loader-bar" id="introProgressBar"></div>
+            </div>
+
+            <div class="intro-status-row">
+                <span id="introPercent">0%</span>
+                <span id="introStatusTxt">جاري تجهيز تجربة الفخامة المطلقة...</span>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Top Announcement Bar -->
+    <div class="announcement-bar">
+        <span><i class="fa-solid fa-crown text-gold"></i> خصم حصري لفترة محدودة الحق العروض <i class="fa-solid fa-truck-fast text-gold"></i></span>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-icon"><i class="fa-solid fa-stopwatch"></i></span>
+                <div class="logo-text">
+                    <span class="brand-name">Aqrab </span>
+                    <span class="brand-sub">First Choice</span>
+                </div>
+            </a>
+
+            <nav class="nav-links">
+                <a href="#hero" class="active">الرئيسية</a>
+                <a href="#featured">الساعات المميزة</a>
+                <a href="#catalog">المجموعة الكاملة</a>
+            </nav>
+            <div class="nav-actions">
+                <!-- Theme Toggle Button -->
+                <button class="theme-toggle-btn" id="themeToggleBtn" title="تغيير المظهر">
+                    <span class="theme-icon-wrapper">
+                    <i class="fa-solid fa-sun" id="themeIcon"></i>
+                    </span>
+                </button>
+
+                <button class="icon-btn search-trigger" id="searchBtn" title="بحث">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <button class="cart-btn" id="openCartBtn">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="cart-badge" id="cartCount">0</span>
+                    <span class="cart-btn-text">السلة</span>
+                </button>
+            </div>
+    </header>
+
+    <!-- Search Overlay -->
+    <div class="search-overlay" id="searchOverlay">
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="ابحث عن موديل، ماركة، أو سعر الساعـة..." autocomplete="off">
+            <button id="closeSearchBtn"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+    </div>
+
+    <!-- Hero Section with Fixed Elegant 3D Watch -->
+    <section class="hero-section" id="hero">
+        <div class="hero-bg-glow"></div>
+        <div class="hero-grid">
+            <div class="hero-content">
+                
+                <h1 class="hero-title">
+                الجودة العالية <span class="gold-gradient-text">اللى  تستحقها </span>
+                </h1>
+                <p class="hero-subtitle">
+                    اكتشف تشكيلة ساعاتنا المميزة وفرنالك أفضل الخامات بأسعار تنافسية مع ميزة الشحن  والدفع بعد المعاينة عشان تستلم وأنت مطمن 100%
+                </p>
+                <div class="hero-cta-group">
+                    <a href="#catalog" class="btn btn-primary glow-effect">
+                        <span>تسوق التشكيلة الفاخرة</span>
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </a>
+                    <a href="#featured" class="btn btn-secondary">
+                        <i class="fa-solid fa-play"></i>
+                        <span>عرض الموديلات المميزة</span>
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">+2,000</span>
+                        <span class="stat-label"> عميل</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">ضمان استبدال واسترجاع لو فى عيوب صناعه</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">خدمة سريعة ومباشرة</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fixed 3D Watch Container -->
+            <div class="hero-3d-container">
+                
+                <canvas id="watch3dCanvas"></canvas>
+                <div class="canvas-reflection"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Features Bar -->
+    <section class="features-bar">
+        <div class="feature-card">
+            <div class="feature-icon"><i class="fa-solid fa-truck-ramp-box"></i></div>
+            <div class="feature-text">
+                <h3>شحن سريع ومجاني</h3>
+                <p>توصيل آمن حتى باب البيت لجميع المحافظات</p>
+            </div>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon"><i class="fa-solid fa-box-open"></i></div>
+            <div class="feature-text">
+                <h3>معاينة قبل الدفع</h3>
+                <p>افحص الساعة وجربها بنفسك قبل الاستلام</p>
+            </div>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <div class="feature-text">
+                <h3>ضمان عام كامل</h3>
+                <p>ضمان شامل ضد عيوب الصناعة</p>
+            </div>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon"><i class="fa-solid fa-headset"></i></div>
+            <div class="feature-text">
+                <h3>خدمة عملاء VIP</h3>
+                <p>متابعة وتأكيد مباشر للطلب</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Watches Section -->
+    <section class="featured-section" id="featured">
+        <div class="section-header">
+            <span class="section-tag">الأكثر مبيعاً</span>
+            <h2 class="section-title">الساعات <span class="gold-gradient-text">الأكثر طلباً</span></h2>
+            <div class="title-line"></div>
+        </div>
+
+        <div class="featured-grid" id="featuredGrid">
+            <!-- Dynamic Injection from JS -->
+        </div>
+    </section>
+    <!-- Full Catalog Section with Filters -->
+    <section class="catalog-section" id="catalog">
+        <div class="section-header">
+            <span class="section-tag">كتالوج 2026</span>
+            <h2 class="section-title">اختر ساعتك <span class="gold-gradient-text">المفضلة</span></h2>
+            <div class="title-line"></div>
+        </div>
+
+        <!-- Gender Tab Controls (رجالي / حريمي / الكل) -->
+        <div class="gender-filters">
+            <button class="gender-btn active" data-gender="all">
+                <i class="fa-solid fa-layer-group"></i> جميع الساعات
+            </button>
+            <button class="gender-btn" data-gender="men">
+                <i class="fa-solid fa-mars"></i> ساعات رجالي
+            </button>
+            <button class="gender-btn" data-gender="women">
+                <i class="fa-solid fa-venus"></i> ساعات حريمي
+            </button>
+        </div>
+        
+        <!-- Category Filter Controls -->
+        <div class="category-filters">
+            <button class="filter-btn active" data-filter="all">جميع المنتجات</button>
+            <button class="filter-btn" data-filter="Rolex">رولكس Rolex</button>
+            <button class="filter-btn" data-filter="PatekPhilippe">باتيك فيليب Patek</button>
+            <button class="filter-btn" data-filter="AUDEMARSPIGUET">أوديمار بيجيه AP</button>
+            <button class="filter-btn" data-filter="Omega">أوميجا Omega</button>
+            <button class="filter-btn" data-filter="Cartier">كارتير Cartier</button>
+            <button class="filter-btn" data-filter="Casio">كاسيو Casio</button>
+            <button class="filter-btn" data-filter="Hublot">هوبلو Hublot</button>
+            <button class="filter-btn" data-filter="Tissotprx">تيسوت Tissot</button>
+            <button class="filter-btn" data-filter="Bestwin">بيست وين Bestwin</button>
+            <button class="filter-btn" data-filter="Delux">ديلوكس Delux</button>
+            <button class="filter-btn" data-filter="Chanel">شانيل Chanel</button>
+            <button class="filter-btn" data-filter="Dior">ديور Dior</button>
+            <button class="filter-btn" data-filter="Ck">سي كاي Ck</button>
+            <button class="filter-btn" data-filter="Festna">فيستينا Festna</button>
+            <button class="filter-btn" data-filter="MichaelKors">مايكل كورس MK</button>
+            <button class="filter-btn" data-filter="Glasses">نظارات Glasses</button>
+        </div>
+
+        <div class="sort-selector">
+            <label for="sortSelect"><i class="fa-solid fa-arrow-down-short-wide"></i> ترتيب حسب:</label>
+            <select id="sortSelect">
+                <option value="featured">الأبرز</option>
+                <option value="price-low">السعر: من الأقل للأعلى</option>
+                <option value="price-high">السعر: من الأعلى للأقل</option>
+                <option value="popular">الأعلى تقييماً</option>
+            </select>
+        </div>
+        
+        <!-- Catalog Product Grid -->
+        <div class="products-grid" id="productsGrid">
+            <!-- Dynamic Injection from JS -->
+        </div>
+    </section>
+
+    
+    <!-- Shopping Cart Drawer Overlay & Sidebar -->
+    <div class="cart-drawer-overlay" id="cartOverlay"></div>
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="cart-header">
+            <div class="cart-header-title">
+                <i class="fa-solid fa-bag-shopping gold-gradient-text"></i>
+                <h3>سلة المشتريات (<span id="cartDrawerCount">0</span>)</h3>
+            </div>
+            <button class="close-cart-btn" id="closeCartBtn">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <div class="cart-body" id="cartBody">
+            <!-- Dynamic Cart Items -->
+        </div>
+
+        <div class="cart-footer" id="cartFooter">
+            <div class="summary-line">
+                <span>المجموع الفرعي:</span>
+                <span class="summary-val" id="cartSubtotal">0 ج.م</span>
+            </div>
+            <div class="summary-line">
+                <span>مصاريف الشحن:</span>
+                <span class="summary-val text-gold">+مصاريف الشحن</span>
+            </div>
+            <div class="summary-line total-line">
+                <span>الإجمالي النهائي:</span>
+                <span class="summary-val gold-gradient-text" id="cartTotal">0 ج.م</span>
+            </div>
+
+            <button class="btn btn-primary btn-block glow-effect" id="proceedCheckoutBtn">
+                <span>إتمام الطلب والشراء الآن</span>
+                <i class="fa-solid fa-arrow-left"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Checkout Modal Container -->
+    <div class="modal-overlay" id="checkoutModalOverlay">
+        <div class="modal-card checkout-modal">
+            <button class="modal-close" id="closeCheckoutModal"><i class="fa-solid fa-xmark"></i></button>
+
+            <div class="checkout-header">
+                <div class="checkout-icon-badge">
+                    <i class="fa-solid fa-shield-heart"></i>
+                </div>
+                <h3>تأكيد الطلب والشحن</h3>
+                <p>أدخل بياناتك للتسليم المباشر وسيتم إرسال الطلب فوراً إلينا</p>
+            </div>
+
+            <form id="checkoutForm" class="checkout-form">
+                <!-- Name Field -->
+                <div class="form-group">
+                    <label for="fullName">
+                        <i class="fa-solid fa-user"></i> الاسم بالكامل (رباعي) <span class="required">*</span>
+                    </label>
+                    <input type="text" id="fullName" placeholder="مثال: أحمد محمد علي محمود" required minlength="8">
+                    <span class="input-hint">يرجى كتابة الاسم رباعي للتأكد من سهولة التسليم</span>
+                </div>
+
+                <!-- Primary Phone -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="primaryPhone">
+                            <i class="fa-solid fa-phone"></i> رقم الموبايل الأساسي <span class="required">*</span>
+                        </label>
+                        <input type="tel" id="primaryPhone" placeholder="010XXXXXXXX" pattern="01[0125][0-9]{8}" required>
+                    </div>
+
+                    <!-- Secondary Phone -->
+                    <div class="form-group">
+                        <label for="secondaryPhone">
+                            <i class="fa-solid fa-mobile-retro"></i> رقم الموبايل الاحتياطي <span class="required">*</span>
+                        </label>
+                        <input type="tel" id="secondaryPhone" placeholder="011XXXXXXXX أو رقم آخر" pattern="01[0125][0-9]{8}" required>
+                    </div>
+                </div>
+
+                <!-- Detailed Address -->
+                <div class="form-group">
+                    <label for="address">
+                        <i class="fa-solid fa-location-dot"></i> العنوان التفصيلي (المحافظة - المدينة - الشارع - رقم المبنى) <span class="required">*</span>
+                    </label>
+                    <textarea id="address" rows="3" placeholder="مثال: لمنصورة - Masns City - شارع مصر الطيران - عمارة 15 - شقة 4" required></textarea>
+                </div>
+
+                <div class="form-group">
+                <label for="governorate">
+                    <i class="fa-solid fa-city"></i> المحافظة <span class="required">*</span>
+                </label>
+                <select id="governorate" required>
+                    <option value="" disabled selected>اختر المحافظة</option>
+                    <option value="القاهرة">القاهرة</option>
+                    <option value="الجيزة">الجيزة</option>
+                    <option value="الإسكندرية">الإسكندرية</option>
+                    <option value="الدقهلية">الدقهلية (المنصورة)</option>
+                    <option value="القليوبية">القليوبية</option>
+                    <option value="الشرقية">الشرقية</option>
+                    <option value="المنوفية">المنوفية</option>
+                    <option value="الغربية">الغربية</option>
+                    <option value="البحيرة">البحيرة</option>
+                    <option value="كفر الشيخ">كفر الشيخ</option>
+                    <option value="دمياط">دمياط</option>
+                    <option value="بورسعيد">بورسعيد</option>
+                </select>
+            </div>
+
+                <!-- Order Summary Mini Card -->
+                <div class="checkout-summary-box">
+                    <div class="summary-item">
+                        <span>عدد القطع:</span>
+                        <strong id="modalItemsCount">0</strong>
+                    </div>
+                    <div class="summary-item">
+                        <span>المبلغ الإجمالي:</span>
+                        <strong class="gold-gradient-text" id="modalTotalPrice">0 ج.م</strong>
+                    </div>
+                    <div class="summary-item">
+                        <span>طريقة الدفع:</span>
+                        <strong>الدفع عند الاستلام (بعد المعاينة)</strong>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block glow-effect" id="submitOrderBtn">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    <span>تأكيد الشراء وإرسال الطلب فوراً</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Success Confirmation Modal -->
+    <div class="modal-overlay" id="successModalOverlay">
+        <div class="modal-card success-modal">
+            <div class="success-icon-wrap">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <h2>شكراً لتعاملك معانا!</h2>
+            <p class="success-msg">تم إرسال واستلام تفاصيل طلبك بنجاح! سيقوم فريق المبيعات بالتواصل معك فوراً لتأكيد التوصيل.</p>
+            
+            <div class="order-details-box" id="successOrderDetails">
+                <!-- Order details summarized -->
+            </div>
+
+            <button class="btn btn-primary btn-block glow-effect" id="closeSuccessBtn">تم، مواصلة التسوق</button>
+        </div>
+    </div>
+
+    <!-- Quick View Product Modal -->
+    <div class="modal-overlay" id="quickViewModalOverlay">
+        <div class="modal-card quickview-modal">
+            <button class="modal-close" id="closeQuickViewModal"><i class="fa-solid fa-xmark"></i></button>
+            <div class="quickview-grid" id="quickViewContent">
+                <!-- Dynamically populated -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification System -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col brand-col">
+                <div class="logo">
+                    <span class="logo-icon"><i class="fa-solid fa-stopwatch"></i></span>
+                    <div class="logo-text">
+                        <span class="brand-name">Aqrab</span>
+                        <span class="brand-sub">First Choice</span>
+                    </div>
+                </div>
+                <p>وجهتك الأولى لاقتناء أفخم الساعات الفاخرة التي توحي بالفخامة والأناقة الحقيقية.</p>
+                <div class="social-links">
+                    <a href="tel:01080860634"><i class="fa-solid fa-phone"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>روابط سريعة</h4>
+                <ul>
+                    <li><a href="#hero">الرئيسية</a></li>
+                    <li><a href="#featured">الأكثر مبيعاً</a></li>
+                    <li><a href="#catalog">كتالوج الساعات</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>خدمة العملاء</h4>
+                <ul>
+                    <li><i class="fa-solid fa-phone text-gold"></i> 01080860634</li>
+                    <li><i class="fa-solid fa-shield-halved text-gold"></i> سياسة الضمان والاستبدال</li>
+                    <li><i class="fa-solid fa-truck-fast text-gold"></i> التوصيل داخل المنصوره</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>جميع الحقوق محفوظة &copy; 2026 Aqrab First Choice - متجر الساعات الفاخرة | تصميم وتطوير: Fares Ahmed</p>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="main.js"></script>
+</body>
+</html>
